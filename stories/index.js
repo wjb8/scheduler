@@ -14,6 +14,8 @@ import Appointment from "components/Appointment/index"
 import Header from "components/Appointment/Header"
 import Empty from "components/Appointment/Empty"
 import Show from "components/Appointment/Show"
+import Confirm from "components/Appointment/Confirm"
+import Status from "components/Appointment/Status"
 
 const days = [
   {
@@ -142,4 +144,19 @@ storiesOf("Button", module)
       .add("Appointment with Time", () => <Appointment time="12pm" />)
       .add("Header", () => <Header time="12pm" />)
       .add("Empty", () => <Empty onAdd={action("onAdd")} />)
-      .add("Show", () => <Show student="Heavens Murgatroyd" interviewer={interviewer.name} onEdit={action("onEdit")} onDelete={action("onDelete")} />)
+      .add("Show", () => 
+        <Show 
+          student="Heavens Murgatroyd" 
+          interviewer={interviewer.name} 
+          onEdit={action("onEdit")} 
+          onDelete={action("onDelete")}
+        />
+      )
+      .add("Confirm", () => 
+        <Confirm 
+          message="Delete appointment?" 
+          onConfirm={action("onConfirm")} 
+          onCancel={action("onCancel")}
+        />
+      )
+      .add ("Status", () => <Status message="Deleting" />)
