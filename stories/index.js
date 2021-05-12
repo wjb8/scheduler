@@ -17,6 +17,7 @@ import Show from "components/Appointment/Show"
 import Confirm from "components/Appointment/Confirm"
 import Status from "components/Appointment/Status"
 import Error from "components/Appointment/Error"
+import Form from "components/Appointment/Form"
 
 const days = [
   {
@@ -126,14 +127,14 @@ storiesOf("Button", module)
     .add("Initial", () => (
       <InterviewerList
         interviewers={interviewers}
-        setInterviewer={action("setInterviewer")}
+        onChange={action("setInterviewer")}
       />
     ))
     .add("Preselected", () => (
       <InterviewerList
         interviewers={interviewers}
-        interviewer={3}
-        setInterviewer={action("setInterviewer")}
+        value={4}
+        onChange={action("setInterviewer")}
       />
   ));
 
@@ -161,4 +162,14 @@ storiesOf("Button", module)
         />
       )
       .add("Status", () => <Status message="Deleting" />)
-      .add("Error", () => <Error message="Failed to delete" onClose={action("onClose")} />);
+      .add("Error", () => <Error message="Failed to delete" onClose={action("onClose")} />)
+      .add("Create", () => <Form interviewers={interviewers} onSave={action("onSave")} onCancel={action("onCancel")}/>)
+      .add("Edit", () => 
+        <Form 
+          name="Bob Mould" 
+          interviewers={interviewers} 
+          interviewer={2}
+          onSave={action("onSave")}
+          onCancel={action("onCancel")}
+        />
+        )
