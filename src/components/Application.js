@@ -46,7 +46,7 @@ const appointments = [
       student: "Sacka Wacka",
       interviewer: {
         id: 1,
-        name: "Sylvia Palmer",
+        name: "Fred Penner",
         avatar: "https://i.imgur.com/T2WwVfS.png",
       }
     }
@@ -62,7 +62,7 @@ const appointments = [
       student: "Bob Mould",
       interviewer: {
         id: 1,
-        name: "Sylvia Palmer",
+        name: "Captain Beefheart",
         avatar: "https://i.imgur.com/T2WwVfS.png",
       }
     }
@@ -70,6 +70,13 @@ const appointments = [
 ];
 
 export default function Application(props) {
+  const listAppointments = appointments.map(appointment => 
+    <Appointment
+      key={appointment.id}
+      {... appointment}
+    />
+  )
+
   const [day, setDay] = useState('Monday');
 
   // const listAppointments = 
@@ -97,7 +104,8 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        
+        {listAppointments}
+        <Appointment key="last" time="5pm" />
       </section>
     </main>
   );
