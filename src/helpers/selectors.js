@@ -21,7 +21,6 @@ function getInterview(state, interview) {
   }
   const interviewer = state.interviewers[interview.interviewer];
   interview.interviewer = interviewer;
-  console.log(interview);
   return interview;
   
 }
