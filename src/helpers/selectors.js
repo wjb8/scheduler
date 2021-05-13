@@ -1,4 +1,5 @@
 function getAppointmentsForDay(state, day) {
+  
   const appointmentsForDay = [];
   const dayFound = state.days.find(el => el.name === day);
   
