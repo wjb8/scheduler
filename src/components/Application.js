@@ -6,7 +6,7 @@ import useApplicationData from "hooks/useApplicationData";
 import {
   getAppointmentsForDay,
   getInterviewersForDay,
-  getInterview,
+  getInterview
 } from "helpers/selectors";
 
 export default function Application(props) {
@@ -25,7 +25,7 @@ export default function Application(props) {
         id={appointment.id}
         time={appointment.time}
         interview={interview}
-        interviewers={dailyInterviewers}
+        interviewers={dailyInterviewers || []}
         bookInterview={bookInterview}
         cancelInterview={cancelInterview}
       />
@@ -52,7 +52,7 @@ export default function Application(props) {
       </section>
       <section className="schedule">
         {listAppointments}
-        <Appointment key="last" time="5pm" />
+        <Appointment key="last" time="5pm" interviewers={[]} />
       </section>
     </main>
   );
