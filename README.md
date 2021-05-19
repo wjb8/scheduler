@@ -29,3 +29,15 @@ npm run storybook
 ```sh
 npm run cypress
 ```
+
+## Screenshots
+
+!["Standard view"](https://github.com/wjb8/scheduler/blob/master/docs/desktop-view.png?raw=true)
+
+!["Appointment hover"](https://github.com/wjb8/scheduler/blob/master/docs/appointment-hover.png?raw=true)
+
+!["Create/edit appointment form"](https://github.com/wjb8/scheduler/blob/master/docs/appointment-form.png?raw=true)
+
+!["Delete confirmation"](https://github.com/wjb8/scheduler/blob/master/docs/confirm-delete.png?raw=true)
+
+!["Responsive CSS Design"](https://github.com/wjb8/scheduler/blob/master/docs/mobile-view.png?raw=true)
