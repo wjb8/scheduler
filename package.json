@@ -45,7 +45,7 @@
     "eslint-plugin-cypress": "^2.11.3",
     "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",
-    "react-test-renderer": "^16.9.0"
+    "react-test-renderer": "^16.14.0"
   },
   "jest": {
     "watchPathIgnorePatterns": [
