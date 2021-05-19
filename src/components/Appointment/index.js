@@ -49,7 +49,6 @@ export default function Appointment(props) {
   };
 
   const edit = () => {
-    console.log("edit");
     transition(EDIT);
   };
 
